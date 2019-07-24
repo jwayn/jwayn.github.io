@@ -271,8 +271,6 @@ section h1, h2 {
 }
 
 .portfolio__content__item > div {
-    display: flex;
-    justify-content: center; 
     margin: 10px 0;
 }
 .portfolio__content__item > div > img {
