@@ -85,6 +85,8 @@ nav {
    justify-content: center;
    transition: top 0.2s ease-in;
    height: 50px;
+   z-index: 500;
+   border-bottom: 1px solid #E0D15E;
 }
 
 .sticky {
@@ -140,7 +142,7 @@ nav {
 .content>:nth-child(odd){
     font-family: 'Muli', sans-serif;
     background-color: #DAD8C9;
-    color: #1D3752;
+    color: #212121;
 }
 
 .page {
@@ -153,6 +155,84 @@ section h1, h2 {
     text-align: center;
     margin: 0;
     padding-top: 76px;
+}
+
+.portfolio__timeline {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio__timeline__line {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    width: 80vw;
+    z-index: 0;
+}
+
+.portfolio__timeline__marker {
+    width: 15px;
+    height: 15px;
+    background-color: #C36629;
+    border-radius: 50%;
+    position: relative;
+    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+}
+
+.portfolio__timeline__marker:hover {
+    background-color: #C36629 !important;
+}
+
+.portfolio__timeline__marker.marker-active {
+    background-color: #C36629;
+}
+
+
+.portfolio__timeline__marker::before, .portfolio__timeline__marker::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    height: 3px;
+    width: 10vw;
+    z-index: -1;
+    background-color: #C36629;
+}
+
+.marker-active::after {
+    background-color: #E0D15E;
+}
+
+.marker-active::before {
+    background-color: #C36629;
+}
+
+.marker-active ~ .portfolio__timeline__marker,
+.marker-active ~ .portfolio__timeline__marker::before,
+.marker-active ~ .portfolio__timeline__marker::after {
+    background-color: #E0D15E;
+}
+
+
+.portfolio__timeline__marker::before {
+    left: calc(-10vw + calc(25px / 2));
+}
+.portfolio__timeline__marker::after {
+    left: calc(25px / 2);
+}
+
+.portfolio__timeline__marker > span::before {
+    content: attr(data-year);
+    top: -30px;
+    left: -10px;
+    position: absolute;
+    color: #E0D15E;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 20px;
 }
 
 @media screen and (max-width: 600px) {
