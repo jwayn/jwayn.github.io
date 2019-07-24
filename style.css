@@ -267,7 +267,7 @@ section h1, h2 {
 
 .portfolio__content__item {
     margin-bottom: 50px;
-    max-width: 90vw;
+    width: 100%;
 }
 
 .portfolio__content__item > div {
