@@ -262,12 +262,12 @@ section h1, h2 {
     justify-content: center;
     flex-direction: column;
     transition: opacity 2s cubic-bezier(0.19, 1, 0.22, 1);
+    max-width: 900px;
 }
 
 .portfolio__content__item {
     margin-bottom: 50px;
     width: 90vw;
-    max-width: 900px;
 }
 
 .portfolio__content__item > div {
