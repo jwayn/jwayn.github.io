@@ -67,19 +67,137 @@
             <h1>My Work</h1>
             <section class="portfolio__timeline">
                 <div class="portfolio__timeline__line">
-                    <div class="portfolio__timeline__marker marker-active">
+                    <div class="portfolio__timeline__marker marker-2016 marker-active">
                         <span data-year="2016"></span>
                     </div>
-                    <div class="portfolio__timeline__marker">
+                    <div class="portfolio__timeline__marker marker-2017">
                         <span data-year="2017"></span>
                     </div>
-                    <div class="portfolio__timeline__marker">
+                    <div class="portfolio__timeline__marker marker-2018">
                         <span data-year="2018"></span>
                     </div>
-                    <div class="portfolio__timeline__marker">
+                    <div class="portfolio__timeline__marker marker-2019">
                         <span data-year="2019"></span>
                     </div>
+                    <div class="portfolio__timeline__marker marker-future">
+                        <span data-year="future"></span>
+                    </div>
                 </div>
+            </section>
+            <section class="portfolio__content">
+                <div class="portfolio__content__left-arrow"></div>
+                
+                <section id="year-2016" class="portfolio__content__year year-2016 portfolio__content__year--active">
+                    <h2>2016</h2>
+                    <section class="portfolio__content__item">
+                        <h3>D&D Initiative Tracker</h3>
+                        <p><span class="portfolio__content__item__title">Project Type:</span> Hobby</p>
+                        <p><span class="portfolio__content__item__title">Abstract:</span> A utility created to track player turn order in the popular role playing game, Dungeons and Dragons.</p>
+                        <p><span class="portfolio__content__item__title">Technologies:</span> HTML, CSS, JavaScript, JQuery</p>
+                        <a href="https://codepen.io/yust/pen/GZgejL" target="_blank" rel="noopener noreferrer">Code / Demo</a>
+                        <div>
+                            <img src="./images/init-tracker.png" alt="D&D Initiative Tracker Screenshot"/>
+                        </div>
+                    </section>
+                </section>
+
+                <section id="year-2017" class="portfolio__content__year year-2017">
+                    <h2>2017</h2>
+                    <section class="portfolio__content__item">
+                        <h3>YeeBot</h3>
+                        <p><span class="portfolio__content__item__title">Project Type:</span> Hobby</p>
+                        <p><span class="portfolio__content__item__title">Abstract:</span> A discord bot created to allow users to submit images for a digital currency, and retrieve those images are random later in exchange for the currency earned by submitting. It includes several commands, as well as a voting system for submitted images.</p>
+                        <p><span class="portfolio__content__item__title">Technologies:</span> Python, matplotlib</p>
+                        <a href="https://github.com/jwayn/YeeBot" target="_blank" rel="noopener noreferrer">Code</a>
+                        <div>
+                            <img src="./images/discord-logo.jpg" alt="Discord Logo"/>
+                        </div>
+                        
+                    </section>
+                </section>
+                <section id="year-2018" class="portfolio__content__year year-2018">
+                    <h2>2018</h2>
+                    <section class="portfolio__content__item">
+                        <h3>Sound of August</h3>
+                        <p><span class="portfolio__content__item__title">Project Type:</span> Client</p>
+                        <p><span class="portfolio__content__item__title">Abstract:</span> A mobile-first responsive portfolio website created for a client client to showcase their voice acting work. The portfolio includes a custom audio player for the client's audio content.</p>
+                        <p><span class="portfolio__content__item__title">Technologies:</span> HTML5, CSS3, JavaScript</p>
+                        <a href="http://www.soundofaugust.com" target="_blank" rel="noopener noreferrer">Demo</a> / Code available upon request
+                        <div>
+                            <img src="./images/soundofaugust.png" alt="Screenshot of www.soundofaugust.com"/>
+                        </div>
+                        
+                    </section>
+
+                    <section class="portfolio__content__item">
+                        <h3>JavaScript Canvas Clock</h3>
+                        <p><span class="portfolio__content__item__title">Project Type:</span> Hobby</p>
+                        <p><span class="portfolio__content__item__title">Abstract:</span> An apple-esque clock made using the JavaScript/HTML5 canvas API.</p>
+                        <p><span class="portfolio__content__item__title">Technologies:</span>  HTML5, JavaScript</p>
+                        <a href="https://codepen.io/yust/pen/xaPJVg" target="_blank" rel="noopener noreferrer">Demo / Code</a>
+                        <div>
+                            <img src="./images/jsclock.png" alt="Screenshot JavaScript Canvas Clock"/>
+                        </div>
+                        
+                    </section>
+                    
+                    <section class="portfolio__content__item">
+                        <h3>SwearJar</h3>
+                        <p><span class="portfolio__content__item__title">Project Type:</span> Hobby</p>
+                        <p><span class="portfolio__content__item__title">Abstract:</span> A discord bot created to monitor servers for swears, and collect and distribute metrics detailing the frequency of swears.</p>
+                        <p><span class="portfolio__content__item__title">Technologies:</span> Nodejs, JavaScript</p>
+                        <a href="https://gitlab.com/_yust/dicebot" target="_blank" rel="noopener noreferrer">Code</a>
+                        <div>
+                            <img src="./images/discord-logo.jpg" alt="Discord Logo"/>
+                        </div>
+                        
+                    </section>
+
+                    <section class="portfolio__content__item">
+                        <h3>Dice Buddy</h3>
+                        <p><span class="portfolio__content__item__title">Project Type:</span> Hobby</p>
+                        <p><span class="portfolio__content__item__title">Abstract:</span> A discord bot created to assist with the rolling of dice while playing the popular role playing game, Dungeons and Dragons, online. The bot can handle dice sided from 4 to 100.</p>
+                        <p><span class="portfolio__content__item__title">Technologies:</span> Python</p>
+                        <a href="https://gitlab.com/_yust/dicebot" target="_blank" rel="noopener noreferrer">Code</a>
+                        <div>
+                            <img src="./images/discord-logo.jpg" alt="Discord Logo"/>
+                        </div>
+                        
+                    </section>
+
+                </section>
+
+                <section id="year-2019" class="portfolio__content__year year-2019">
+                    <h2>2019</h2>
+                    <section class="portfolio__content__item">
+                        <h3>Chameleon</h3>
+                        <p><span class="portfolio__content__item__title">Project Type:</span> Hobby</p>
+                        <p><span class="portfolio__content__item__title">Abstract:</span> A recreation of the board game "Chameleon". Built with React using websockets, the game runs in real time with a live chat system, a lobby/room system, and voting system.</p>
+                        <p><span class="portfolio__content__item__title">Technologies:</span> Nodejs, React, Websockets, JavaScript, HTML, CSS</p>
+                        <a href="https://github.com/jwayn/chameleon" target="_blank" rel="noopener noreferrer">Code</a> |
+                        <a href="https://chameleon.jwayne.dev/" target="_blank" rel="noopener noreferrer">Demo</a>
+                        <div>
+                            <img src="./images/chameleon.png" alt="A screenshot of the Chameleon game"/>
+                        </div>
+                        
+                    </section>
+                </section>
+
+                <section id="year-future" class="portfolio__content__year year-future">
+                    <h2>Future</h2>
+                    <section class="portfolio__content__item">
+                        <h3>Indexzer0</h3>
+                        <p><span class="portfolio__content__item__title">Project Type:</span> Hobby</p>
+                        <p><span class="portfolio__content__item__title">Abstract:</span> An open-source rendition of the extremely popular website StackOverflow.com. The goal of this project is to provide a self-hostable internal knowledge base solution.</p>
+                        <p><span class="portfolio__content__item__title">Technologies:</span> Nodejs, React, PostgresQL, Websockets, JavaScript, HTML, CSS</p>
+                        <a href="https://github.com/jwayn/indexzero" target="_blank" rel="noopener noreferrer">Code</a>
+                        <div>
+                            <img src="./images/index0.png" alt="A screenshot of index0."/>
+                        </div>
+                        
+                    </section>
+                </section>
+            <div class="portfolio__content__right-arrow"></div>
             </section>
         </section>
         <section id="contact" class="contact page">
