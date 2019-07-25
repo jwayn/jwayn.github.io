@@ -278,6 +278,8 @@ section h1, h2 {
 
 .portfolio__content__item > div {
     margin: 10px 0;
+    display: flex;
+    justify-content: center; 
 }
 .portfolio__content__item > div > img {
     max-width: 100%;
