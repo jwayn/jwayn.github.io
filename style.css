@@ -261,10 +261,11 @@ section h1, h2 {
     align-items: center;
     justify-content: center;
     width: 100%;
+    padding-top: 65px;
 }
 
 .portfolio__content__year {
-    padding-top: 200px;
+    padding-top: 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -304,14 +305,15 @@ section h1, h2 {
 .sticky-timeline {
     position: fixed;
     width: 100%;
-    top: 50px;
+    top: -100px;
     left: 0;
-    display: none;
+    transition: top .5s cubic-bezier(.32,.47,.46,1);
+    z-index: 100;
 }
 
 .active-timeline {
+    top: 50px;
     display: flex;
-    z-index: 100;
 }
 
 @media screen and (max-width: 600px) {

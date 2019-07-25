@@ -122,13 +122,13 @@ document.querySelector('.portfolio').insertBefore(timelineClone, timeline);
 
 function showTimeline() {
     page = window.pageYOffset;
-    if(page >= (window.innerHeight * 2) + 100) {
+    if(page >= (window.innerHeight * 2) + 200) {
         timelineClone.classList.add('active-timeline');
     } else {
         timelineClone.classList.remove('active-timeline');
     }
 
-    if(page >= document.querySelector('.contact').getBoundingClientRect().top + scrollY - 200) {
+    if(page >= document.querySelector('.contact').getBoundingClientRect().top + scrollY - 100) {
         timelineClone.classList.remove('active-timeline');
     }
 }
