@@ -192,8 +192,8 @@ section h1, h2 {
 }
 
 .portfolio__timeline__marker {
-    width: 25px;
-    height: 25px;
+    width: 16px;
+    height: 16px;
     background-color: #C36629;
     border-radius: 50%;
     position: relative;
