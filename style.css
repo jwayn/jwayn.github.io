@@ -279,11 +279,11 @@ section h1, h2 {
 
 .portfolio__content__item > div {
     margin: 10px 0;
+    width: 100%;
 }
 .portfolio__content__item > div > img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    margin: 0 auto;
 }
 
 .portfolio__content__item h3 {
