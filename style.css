@@ -166,6 +166,12 @@ section h1, h2 {
     padding-top: 76px;
 }
 
+.portfolio__content__year > h2 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #E0D15E;
+
+}
+
 .portfolio__timeline {
     width: 100%;
     height: 75px;
