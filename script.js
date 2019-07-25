@@ -6,6 +6,94 @@ new Typewriter('.header__title', {
     loop: true
 });
 
+const skills = [
+    {
+        name: 'HTML',
+        level: 'Adept',
+        percentage: '90',
+        years: '15',
+    },
+    {
+        name: 'CSS',
+        level: 'Adept',
+        percentage: '90',
+        years: '15',
+    },
+    {
+        name: 'JavaScript',
+        level: 'Advanced',
+        percentage: '85',
+        years: '5',
+    },
+    {
+        name: 'React',
+        level: 'Intermediate',
+        percentage: '40',
+        years: '1',
+    },
+    {
+        name: 'Node.js',
+        level: 'Intermediate',
+        percentage: '60',
+        years: '3',
+    },
+    {
+        name: 'Vue.js',
+        level: 'Beginner',
+        percentage: '25',
+        years: '1',
+    },
+    {
+        name: 'Python',
+        level: 'Intermediate',
+        percentage: '40',
+        years: '3',
+    },
+    {
+        name: 'C#',
+        level: 'Beginner',
+        percentage: '30',
+        years: '2',
+    },
+    {
+        name: 'Bash',
+        level: 'Intermediate',
+        percentage: '75',
+        years: '3',
+    },
+    {
+        name: 'Java',
+        level: 'Beginner',
+        percentage: '20',
+        years: '1',
+    },
+    {
+        name: 'Linux',
+        level: 'Advanced',
+        percentage: '75',
+        years: '4',
+    },
+    {
+        name: 'SQL',
+        level: 'Intermediate',
+        percentage: '50',
+        years: '3',
+    },
+    {
+        name: 'Oracle',
+        level: 'Intermediate',
+        percentage: '50',
+        years: '3',
+    },
+    {
+        name: 'PostgreSQL',
+        level: 'Intermediate',
+        percentage: '40',
+        years: '25',
+    },
+
+]
+
 
 // Create our navigation bar clone to be shown when scrolled past header
 let nav = document.querySelector('nav');
@@ -45,10 +133,38 @@ function showTimeline() {
     }
 }
 
+function checkTimelineProgress() {
+    let yearSections = document.querySelectorAll('.portfolio__content__year');
+    yearSections.forEach(yearSection => {
+        let bounding = yearSection.getBoundingClientRect();
+        if (bounding.top <= window.innerHeight / 2 && bounding.bottom >= window.innerHeight / 2) {
+            document.querySelectorAll(`.marker-${yearSection.id.split('-')[1]}`).forEach(marker => {
+                marker.classList.add('marker-active');
+            })
+        } else {
+            document.querySelectorAll(`.marker-${yearSection.id.split('-')[1]}`).forEach(marker => {
+                marker.classList.remove('marker-active');
+            })
+        }
+    });
+
+    console.log('Top section: ', yearSections[0].getBoundingClientRect().top);
+    console.log(window.innerHeight);
+    if(yearSections[0].getBoundingClientRect().top >= 0) {
+        document.querySelectorAll(`.marker-${yearSections[0].id.split('-')[1]}`).forEach(marker => {
+            marker.classList.add('marker-active');
+        })
+    }
+
+
+
+}
+
 //Ensure our sticky elements are being checked on scroll
 showNav();
 window.onscroll = e => {
     showTimeline();
+    checkTimelineProgress();
     showNav();
 }
 

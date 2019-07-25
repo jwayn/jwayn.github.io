@@ -197,7 +197,7 @@ section h1, h2 {
     background-color: #C36629;
     border-radius: 50%;
     position: relative;
-    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     cursor: pointer;
 }
 
@@ -219,6 +219,7 @@ section h1, h2 {
     width: 10vw;
     z-index: -1;
     background-color: #C36629;
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .marker-active::after {
