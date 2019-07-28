@@ -14,7 +14,7 @@ body {
 .container {
     width: 100%;
     height: 100%;
-    padding: 25px;
+    padding: 18px;
 }
 
 .page__header {
@@ -33,6 +33,10 @@ body {
     background-size: cover;
     width: 100%;
     height: 100vh;
+}
+
+.page__title {
+    padding: 60px 0 15px 0;
 }
 
 a {
@@ -171,7 +175,6 @@ nav {
     font-family: 'Bitter', serif;
     text-align: center;
     margin: 0;
-    padding-top: 76px;
 }
 
 .portfolio__content__year > h2 {
@@ -326,7 +329,7 @@ nav {
 .portfolio__carousel__year {
     font-size: 48px;
     color: #E0D15E;
-    padding: 75px 0;
+    padding: 25px 0;
 }
 
 
@@ -450,7 +453,7 @@ nav {
     position: absolute;
     left: 525px;
     top: 125px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 6px 20px -2px rgba(50,50,93,.5),0 3px 7px -3px rgba(0,0,0,.3);
     transform-style: preserve-3d;
 }
@@ -470,26 +473,27 @@ nav {
     padding: 0;
     overflow: hidden;
     color: #404040;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
     outline: none;
 }
 
 .portfolio__carousel__button:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
     color: #808080;
     box-shadow: 0 6px 20px -2px rgba(50,50,93,.50),0 3px 7px -3px rgba(0,0,0,.3);
 }
 
 .portfolio__carousel__button--prev:hover {
-    transform: translateY(-1px) scaleX(-1);
+    transform: translateY(-3px) scaleX(-1);
 }
 
 .portfolio__carousel__button::after {
     content: "\279C";
     position: absolute;
+    font-family: 'Muri', sans-serif;
     text-indent: 0;
     top: 50%;
-    font-size: 28px;
+    font-size: 40px;
     left: 0;
     width: 100%;
     text-align: center;
@@ -547,6 +551,7 @@ nav {
 
     .portfolio__carousel__header__title > h2 {
         text-align: center;
+        margin: 0;
     }
 
     .portfolio__carousel__content__links {

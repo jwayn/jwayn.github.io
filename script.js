@@ -122,9 +122,9 @@ const projects = [
         name: "Sound of August",
         type: "client",
         tech: ["HTML, CSS, JavaScript"],
-        description: "The Sound of August website is a client portfolio created for a professional voice actor. The client required a custom audio player to include a link to download his reels, which was created as a part of this project.",
+        description: "The Sound of August website is a client portfolio created for a professional voice actor. The client required a custom audio player to include a link to download his reels, which was created as a part of this project. The code linked below is specifically for the audio player. Full code is available upon request.",
         image: "soundofaugust.png",
-        code: "unavailable",
+        code: "https://codepen.io/yust/pen/OGrxgZ",
         demo: "http://www.soundofaugust.com"
     },
     {
@@ -388,7 +388,7 @@ function portfolioMove(e) {
 document.querySelector('.portfolio').addEventListener("mousemove", effect3d);
 const moveableEls = document.querySelectorAll('.moveable-3d');
 
-const limit = 65;
+const limit = 45;
 const sensitivity = 50;
 
 
