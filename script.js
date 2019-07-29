@@ -284,7 +284,7 @@ carousel.demo = document.querySelector('.portfolio__carousel__content__links__de
 carousel.image = document.querySelector('.portfolio__carousel__content__image');
 
 let textElements = [carousel.title, carousel.projectType, carousel.descTitle, carousel.description, carousel.code, carousel.demo, carousel.image];
-let direction = -1000;
+let direction = -4000;
 
 function changeElements(options) {
     if(options.year) {
@@ -355,14 +355,14 @@ function portfolioMove(e) {
         } else {
             projectsPosition++;
         }
-        direction = -1000;
+        direction = -4000;
     } else {
         if(projectsPosition === 0) {
             projectsPosition = projects.length - 1;
         } else {
             projectsPosition--;
         }
-        direction = 1000;
+        direction = 4000;
     }
 
     function callChange() {
