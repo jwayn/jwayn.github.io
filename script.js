@@ -124,7 +124,7 @@ const projects = [
         name: "Chameleon",
         type: "hobby",
         tech: ["HTML", "CSS", "JavaScript", "React", "Node.js", "WebSockets"],
-        description: "With a backend written in Node.js, the Chameleon app is a recreation of a popular board game. I created a lobby system which allows multiple games to occur simultaneously. Websockets allow the game’s state to be updated in real time between all players in each game lobby.",
+        description: "With a backend written in Node.js, the Chameleon app is a recreation of a popular board game. I created a lobby system which allows multiple games to occur simultaneously while websockets allow the game’s state to be updated in real time between all players in each game lobby.",
         image: "chameleon.png",
         code: "https://github.com/jwayn/chameleon",
         demo: "https://chameleon.jwayne.dev"
@@ -552,7 +552,7 @@ function animateCanvas() {
             for (let i = 0; i <= embers.length - 1; i++){
                 embers[i].draw();
             }
-            
+
         }
     }
     
