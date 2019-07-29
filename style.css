@@ -11,6 +11,17 @@ body {
    background-color: #DAD8C9;
 }
 
+.bgcanvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+    background-color: #0A1428;
+}
+
 .container {
     width: 100%;
     height: 100%;
@@ -18,25 +29,21 @@ body {
 }
 
 .page__header {
-    background-color: #1D3752;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background:
-        linear-gradient(
-        rgba(0, 0, 0, 0.85), 
-        rgba(0, 0, 0, 0.85)
-        ), url('./images/kari-shea-1SAnrIxw5OY-unsplash.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 50px);
+    padding: 0 10px;
 }
 
 .page__title {
     padding: 60px 0 15px 0;
+    font-size: 40px;
 }
 
 a {
@@ -101,20 +108,20 @@ ul {
 }
 
 nav {
-   background-color: #1D3752;
    display: flex;
    justify-content: center;
    transition: top 0.2s ease-in;
    height: 50px;
    z-index: 500;
-   border-bottom: 1px solid #E0D15E;
 }
 
 .sticky-nav {
+    border-bottom: 1px solid #E0D15E;
     position: fixed;
     width: 100%;
     top: -50px;
     left: 0;
+    background-color: #1D3752;
 }
 
 .active-nav {
@@ -126,7 +133,6 @@ nav {
    justify-content: space-between;
    width: 100%;
    max-width: 900px;
-   background-color: #1D3752;
 }
 
 .navbar > li {
@@ -154,16 +160,10 @@ nav {
     letter-spacing: 3px;
 }
 
-.content>:nth-child(even) {
+.content {
     font-family: 'Muli', sans-serif;
     background-color: #1D3752;
     color: #F5F5F5;
-}
-
-.content>:nth-child(odd){
-    font-family: 'Muli', sans-serif;
-    background-color: #DAD8C9;
-    color: #212121;
 }
 
 .page {
@@ -172,7 +172,7 @@ nav {
 }
 
 .page h1, h2 {
-    font-family: 'Bitter', serif;
+    font-family: 'Darker Grotesque', sans-serif;
     text-align: center;
     margin: 0;
 }
@@ -257,59 +257,15 @@ nav {
 
 .portfolio__timeline__marker > span::before {
     content: attr(data-year);
-    top: -40px;
-    left: -3px;
+    top: -50px;
+    left: -6px;
     position: absolute;
     color: #E0D15E;
     font-family: 'Darker Grotesque', sans-serif;
-    font-size: 20px;
+    font-weight: bold;
+    font-size: 24px;
     transform: rotate(-45deg);
-}
-
-.portfolio__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-
-.portfolio__content__year {
-    padding-top: 100px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    transition: opacity 2s cubic-bezier(0.19, 1, 0.22, 1);
-    max-width: 1200px;
-}
-
-.portfolio__content__item {
-    margin-bottom: 50px;
-    width: 100%;
-}
-
-.portfolio__content__item > div {
-    margin: 10px 0;
-    width: 100%;
-}
-.portfolio__content__item > div > img {
-    width: 100%;
-    height: auto;
-}
-
-.portfolio__content__item h3 {
-    font-family: 'Bitter', serif;
-    letter-spacing: 3px;
-}
-
-.portfolio__content__item p {
-    font-family: 'Darker Grotesque', sans-serif;
-    font-size: 20px;
-}
-
-.portfolio__content__item__title {
-    font-family: 'Bitter', serif;
-    font-size: 16px;
+    text-transform: capitalize;
 }
 
 .sticky-timeline {
@@ -327,7 +283,7 @@ nav {
 }
 
 .portfolio__carousel__year {
-    font-size: 48px;
+    font-size: 32px;
     color: #E0D15E;
     padding: 25px 0;
 }
@@ -389,7 +345,7 @@ nav {
     display: flex;
     align-items: center;
     height: 30px;
-    background: linear-gradient(180deg, #F0E695 0%, #E0D15E 100%);
+    background-color: #E0E0E0;
     border-radius: 5px;
     font-size: 18px;
     padding: 0 15px;
@@ -399,8 +355,32 @@ nav {
 }
 
 
+.portfolio__carousel__header__tech {
+    padding: 5px 0px;
+    margin: 20px 0 0 0;
+}
+
 .portfolio__carousel__header__tech__title {
     font-weight: 400;
+}
+
+.portfolio__carousel__header__tech__content {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 5px 0;
+}
+
+.portfolio__carousel__header__tech__content__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25px;
+    background: linear-gradient(180deg, #F0E695 0%, #E0D15E 100%);
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px 10px;
+    font-weight: 300;
+    margin: 5px 5px 5px 0;
 }
 
 .portfolio__carousel__content {
@@ -490,14 +470,14 @@ nav {
 .portfolio__carousel__button::after {
     content: "\279C";
     position: absolute;
-    font-family: 'Muri', sans-serif;
+    font-family: 'Muli', sans-serif;
     text-indent: 0;
     top: 50%;
     font-size: 40px;
     left: 0;
     width: 100%;
     text-align: center;
-    transform: translateY(-50%);   
+    transform: translateY(calc(-50% - 2px));   
 }
 
 .portfolio__carousel__button--next {
@@ -512,11 +492,16 @@ nav {
 @media screen and (max-width: 1000px) {
 
     .portfolio__carousel__header, .portfolio__carousel__content {
-        padding: 25px;
+        padding: 35px;
     }
 
     .portfolio__carousel__content__image {
-        display: none;
+        position: initial;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow: 0 6px 20px -2px rgba(50,50,93,.5),0 3px 7px -3px rgba(0,0,0,.3);
+        transform-style: preserve-3d;
     }
 }
 
@@ -545,10 +530,6 @@ nav {
         font-size: 1.2rem;
     }
 
-    .portfolio__content__item {
-        max-width: 90vw;
-    }
-
     .portfolio__carousel__header__title > h2 {
         text-align: center;
         margin: 0;
@@ -560,6 +541,10 @@ nav {
 
     .portfolio__carousel__header__title{
         flex-direction: column;
+    }
+
+    .portfolio__carousel__header, .portfolio__carousel__content {
+        padding: 25px;
     }
 
   }

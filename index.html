@@ -7,10 +7,19 @@
     <title>Jason Prickett - Full Stack Web Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header id="home" class="page__header">
-        <h1 class="header__intro">Hello! 👋 <br /> I'm <span class="header__emphasis">Jason Prickett</span>.</h1>
-        <h2 class="header__typewriter">I am a<span class="header__title"> Full Stack Web Developer</span></h2>
+<body id="home">
+    <nav>
+        <ul class="navbar">
+           <li><a href="#home" class="navbar__item"><span class="navbar__item--spaced-letters">hom</span>e</a></li>
+           <li><a href="#about" class="navbar__item"><span class="navbar__item--spaced-letters">abou</span>t</a></li>
+           <li><a href="#portfolio" class="navbar__item"><span class="navbar__item--spaced-letters">portfoli</span>o</a></li>
+           <li><a href="#contact" class="navbar__item"><span class="navbar__item--spaced-letters">contac</span>t</a></li>
+        </ul>
+     </nav>
+    <header class="page__header">
+        <canvas class="bgcanvas"></canvas>
+        <h1 class="header__intro">Hello! 👋 I'm <span class="header__emphasis">Jason Prickett</span>.</h1>
+        <h2 class="header__title">I am a Full Stack Web Developer</h2>
         <ul class="header__social">
             <li class="header__social__item">
                 <a href="https://github.com/jwayn" target="_blank" rel="noopener noreferrer" class="header__social__item__link">
@@ -35,7 +44,7 @@
                         </g>
                     </svg>
                 </a>
-            </li class="header__social__item">
+            </li>
             <li class="header__social__item">
                 <a href="https://www.linkedin.com/in/jason-prickett-736a13129/" target="_blank" rel="noopener noreferrer" class="header__social__item__link">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -46,15 +55,9 @@
                 </a>
             </li>
         </ul>
+
+        
     </header>
-    <nav>
-        <ul class="navbar">
-           <li><a href="#home" class="navbar__item"><span class="navbar__item--spaced-letters">hom</span>e</a></li>
-           <li><a href="#about" class="navbar__item"><span class="navbar__item--spaced-letters">abou</span>t</a></li>
-           <li><a href="#portfolio" class="navbar__item"><span class="navbar__item--spaced-letters">portfoli</span>o</a></li>
-           <li><a href="#contact" class="navbar__item"><span class="navbar__item--spaced-letters">contac</span>t</a></li>
-        </ul>
-     </nav>
      <main class="content">
         <section id="about" class="about page">
             <h1 class="page__title">A Bit About Me</h1>
@@ -87,32 +90,29 @@
 
 
             <div class="container">
-                <h2 class="portfolio__carousel__year">2016</h2>
+                <h2 class="portfolio__carousel__year"></h2>
                 <section class="portfolio__carousel">
                     <div class="portfolio__carousel__container">
                         <header class="portfolio__carousel__header">
                             <section class="portfolio__carousel__header__title">
-                                <h2 class="portfolio__carousel__header__title__name">D&D Initiative Tracker</h2>
-                                <span class="portfolio__carousel__header__project-type">hobby</span>
+                                <h2 class="portfolio__carousel__header__title__name"></h2>
+                                <span class="portfolio__carousel__header__project-type"></span>
                             </section>
-                            <p class="portfolio__carousel__header__tech">
+                            <section class="portfolio__carousel__header__tech">
                                 <span class="portfolio__carousel__header__tech__title">Tech: </span>
-                                <span class="portfolio__carousel__header__tech__content">
-                                    HTML, CSS, Javascript, JQuery
-                                </span>
-                            </p>
+                                <div class="portfolio__carousel__header__tech__content">
+                                </div>
+                            </section>
+                            <img src="images/init-tracker.png" class="portfolio__carousel__content__image moveable-3d"/>
                         </header>
                         <section class="portfolio__carousel__content">
                             <h3 class="portfolio__carousel__content__description-title">Description</h3>
-                            <p class="portfolio__carousel__content__description">
-                                    The D&D initiative tracker was one of my first truly interactive projects. It was created to solve the issue of having an easy solution to track turn order in the popular RPG Dungeons and Dragons. Using JavaScript and jQuery, I learned how to manipulate the DOM with validated form input.
-                            </p>
+                            <p class="portfolio__carousel__content__description"></p>
                             <p class="portfolio__carousel__content__links">
                                 <a href="https://codepen.io/yust/pen/GZgejL" target="_blank" rel="noopener noreferrer" class="portfolio__carousel__content__links__code">Code</a>
                                 <a href="https://codepen.io/yust/pen/GZgejL" target="_blank" rel="noopener noreferrer" class="portfolio__carousel__content__links__demo">Demo</a>
                             </p>
                         </section>
-                        <img src="images/init-tracker.png" class="portfolio__carousel__content__image moveable-3d"/>
                     </div>
                     <button class="portfolio__carousel__button portfolio__carousel__button--prev">Previous</button>
                     <button class="portfolio__carousel__button portfolio__carousel__button--next">Next</button>
