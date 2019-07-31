@@ -3,87 +3,59 @@
 const skills = [
     {
         name: 'HTML',
-        level: 'Adept',
-        percentage: '90',
-        years: '15',
+        years: '9',
     },
     {
         name: 'CSS',
-        level: 'Adept',
-        percentage: '90',
-        years: '15',
+        years: '9',
     },
     {
         name: 'JavaScript',
-        level: 'Advanced',
-        percentage: '85',
-        years: '5',
+        years: '7',
     },
     {
         name: 'React',
-        level: 'Intermediate',
-        percentage: '40',
         years: '1',
     },
     {
         name: 'Node.js',
-        level: 'Intermediate',
-        percentage: '60',
         years: '3',
     },
     {
         name: 'Vue.js',
-        level: 'Beginner',
-        percentage: '25',
         years: '1',
     },
     {
         name: 'Python',
-        level: 'Intermediate',
-        percentage: '40',
         years: '3',
     },
     {
         name: 'C#',
-        level: 'Beginner',
-        percentage: '30',
         years: '2',
     },
     {
         name: 'Bash',
-        level: 'Intermediate',
-        percentage: '75',
         years: '3',
     },
     {
         name: 'Java',
-        level: 'Beginner',
-        percentage: '20',
         years: '1',
     },
     {
         name: 'Linux',
-        level: 'Advanced',
-        percentage: '75',
         years: '4',
     },
     {
         name: 'SQL',
-        level: 'Intermediate',
-        percentage: '50',
         years: '3',
     },
     {
         name: 'Oracle',
-        level: 'Intermediate',
-        percentage: '50',
         years: '3',
     },
     {
         name: 'PostgreSQL',
-        level: 'Intermediate',
-        percentage: '40',
-        years: '25',
+        years: '1',
     },
 ]
 
@@ -136,12 +108,30 @@ const projects = [
         tech: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "PostgreSQL", "JSON Web Tokens"],
         description: "Index Zer0 is an ambitious work-in-progress. The goal of the project is to provide a self-hosted Q&A knowledge base platform in the style of Stack Overflow. Built on Node.js, PostgreSQL, and React, the app currently has user signup with email verification, authentication with JSON Web Tokens, and the creation and display of content with markdown support.",
         image: "index0.png",
-        code: "https://github.com/jwayn/indexzero",
+        code: "https://github .com/jwayn/indexzero",
         demo: "unavailable"
     },
-    
 ];
 
+function populateBars() {
+    let barsContainer = document.querySelector('.about__skills__chart');
+    let maxYears = Math.max(...skills.map(skill => skill.years));
+    console.log('Max years: ', maxYears);
+    skills.forEach(skill => {
+        let bar = document.createElement('div');
+        let progress = document.createElement('div');
+        bar.setAttribute('data-name', skill.name);
+        progress.setAttribute('data-years', skill.years);
+        bar.classList.add('about__skills__chart__bar');
+        progress.classList.add('about__skills__chart__bar__progress')
+        barsContainer.appendChild(bar);
+        bar.appendChild(progress);
+        progress.style.width = Math.round(skill.years / maxYears * 100) + '%';
+    })
+}
+
+populateBars();
+ 
 
 // Create our navigation bar clone to be shown when scrolled past header
 let nav = document.querySelector('nav');
