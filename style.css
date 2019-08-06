@@ -171,6 +171,30 @@ nav {
     min-height: 100vh;
 }
 
+#about {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about__section {
+    max-width: 960px;
+    padding: 15px;
+}
+
+.about__section p {
+    font-size: 24px;
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.about__section a {
+    text-decoration: underline;
+}
+
 .about__skills__chart {
     width: 500px;
     max-height: 100%;
@@ -562,6 +586,10 @@ nav {
 
     .portfolio__carousel__header, .portfolio__carousel__content {
         padding: 25px;
+    }
+
+    .about__section p {
+        font-size: 16px;
     }
 
   }

@@ -1,64 +1,5 @@
 'use strict';
 
-const skills = [
-    {
-        name: 'HTML',
-        years: '9',
-    },
-    {
-        name: 'CSS',
-        years: '9',
-    },
-    {
-        name: 'JavaScript',
-        years: '7',
-    },
-    {
-        name: 'React',
-        years: '1',
-    },
-    {
-        name: 'Node.js',
-        years: '3',
-    },
-    {
-        name: 'Vue.js',
-        years: '1',
-    },
-    {
-        name: 'Python',
-        years: '3',
-    },
-    {
-        name: 'C#',
-        years: '2',
-    },
-    {
-        name: 'Bash',
-        years: '3',
-    },
-    {
-        name: 'Java',
-        years: '1',
-    },
-    {
-        name: 'Linux',
-        years: '4',
-    },
-    {
-        name: 'SQL',
-        years: '3',
-    },
-    {
-        name: 'Oracle',
-        years: '3',
-    },
-    {
-        name: 'PostgreSQL',
-        years: '1',
-    },
-]
-
 let projectsPosition = 0;
 const projects = [
     {
@@ -112,25 +53,6 @@ const projects = [
         demo: "unavailable"
     },
 ];
-
-function populateBars() {
-    let barsContainer = document.querySelector('.about__skills__chart');
-    let maxYears = Math.max(...skills.map(skill => skill.years));
-    console.log('Max years: ', maxYears);
-    skills.forEach(skill => {
-        let bar = document.createElement('div');
-        let progress = document.createElement('div');
-        bar.setAttribute('data-name', skill.name);
-        progress.setAttribute('data-years', skill.years);
-        bar.classList.add('about__skills__chart__bar');
-        progress.classList.add('about__skills__chart__bar__progress')
-        barsContainer.appendChild(bar);
-        bar.appendChild(progress);
-        progress.style.width = Math.round(skill.years / maxYears * 100) + '%';
-    })
-}
-
-populateBars();
  
 
 // Create our navigation bar clone to be shown when scrolled past header
