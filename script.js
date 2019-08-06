@@ -49,7 +49,7 @@ const projects = [
         tech: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "PostgreSQL", "JSON Web Tokens"],
         description: "Index Zer0 is an ambitious work-in-progress. The goal of the project is to provide a self-hosted Q&A knowledge base platform in the style of Stack Overflow. Built on Node.js, PostgreSQL, and React, the app currently has user signup with email verification, authentication with JSON Web Tokens, and the creation and display of content with markdown support.",
         image: "index0.png",
-        code: "https://github .com/jwayn/indexzero",
+        code: "https://github.com/jwayn/indexzero",
         demo: "unavailable"
     },
 ];
