@@ -178,8 +178,8 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: rgb(29,55,82);
-    background: linear-gradient(0deg, rgba(29,55,82,1) 50%, rgba(10,20,40,1) 100%, rgba(0,212,255,1) 100%);
+    background: rgb(10,20,40);
+    background: linear-gradient(0deg, rgba(10,20,40,1) 0%, rgba(29,55,82,1) 0%, rgba(10,20,40,1) 100%);
 }
 
 .about__section {
