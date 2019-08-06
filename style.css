@@ -121,7 +121,8 @@ nav {
     width: 100%;
     top: -50px;
     left: 0;
-    background-color: #1D3752;
+    background: rgb(10,20,40);
+    background: linear-gradient(0deg, rgba(10,20,40,1) 0%, rgba(29,55,82,1) 0%, rgba(10,20,40,1) 100%);
 }
 
 .active-nav {
@@ -177,6 +178,8 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: rgb(29,55,82);
+    background: linear-gradient(0deg, rgba(29,55,82,1) 50%, rgba(10,20,40,1) 100%, rgba(0,212,255,1) 100%);
 }
 
 .about__section {
@@ -233,6 +236,11 @@ nav {
     margin: 0;
 }
 
+#portfolio {
+    background: rgb(228,159,159);
+    background: linear-gradient(0deg, rgba(228,159,159,1) 0%, rgba(172,134,203,1) 20%, rgba(29,55,82,1) 80%);
+}
+
 .portfolio__content__year > h2 {
     padding-bottom: 15px;
     border-bottom: 1px solid #E0D15E;
@@ -246,7 +254,6 @@ nav {
     justify-content: center;
     height: 100px;
     border-bottom: 1px solid #E0D15E;
-    background-color: #1D3752;
     padding-bottom: 25px;
 }
 .portfolio__timeline__line {
