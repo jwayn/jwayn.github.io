@@ -174,8 +174,6 @@ function checkTimelineProgress() {
         }
     });
 
-    console.log('Top section: ', yearSections[0].getBoundingClientRect().top);
-    console.log(window.innerHeight);
     if(yearSections[0].getBoundingClientRect().top >= 0) {
         document.querySelectorAll(`.marker-${yearSections[0].id.split('-')[1]}`).forEach(marker => {
             marker.classList.add('marker-active');
@@ -210,16 +208,13 @@ function changeElements(options) {
     let project = projects[projectsPosition];
     setActive({year: project.year});
 
-    console.log(project);
 
     carousel.year.innerHTML = project.year.charAt(0).toUpperCase() + project.year.slice(1);
     carousel.title.innerHTML = project.name;
     carousel.projectType.innerHTML = project.type;
     let techList = '';
     project.tech.forEach(techItem => {
-        console.log(techItem);
         techList = techList + `<span class="portfolio__carousel__header__tech__content__item">${techItem}</span>`
-        console.log(techList);
     });
     carousel.tech.innerHTML = techList;
 
